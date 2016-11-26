@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mparigi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 21:55:36 by mparigi           #+#    #+#             */
-/*   Updated: 2016/11/26 16:17:22 by mparigi          ###   ########.fr       */
+/*   Created: 2016/11/26 16:14:05 by mparigi           #+#    #+#             */
+/*   Updated: 2016/11/26 16:21:12 by mparigi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/fillit.h"
 
-void	pos_init(int fd, int pos[4])
+void	*tet_error(void)
 {
-
+	ft_putendl("error");
+	return (NULL);
 }
 
-int		size_min(int	nbr_tet)
+char	msg_error(void)
 {
-	int		i;
+	ft_putendl("error");
+	return (ERR);
+}
 
-	nbr_tet *= 4;
-	i = 1;
-	while (i * i < nbr_tet)
-		i++;
-	return (i);
+char	usg_error(void)
+{
+	ft_putendl("usage: ./fillit source_file");
+	return (ERR);
 }
